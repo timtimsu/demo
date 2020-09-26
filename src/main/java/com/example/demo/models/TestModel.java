@@ -19,6 +19,9 @@ public class TestModel {
     @Column(name = "login") String login;
     @Column(name = "password") String password;
 
+    @OneToOne(mappedBy="account")
+    private Person person;
+
     public TestModel() {}
 
     public TestModel(Long personId, String login, String password) {

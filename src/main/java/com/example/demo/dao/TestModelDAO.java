@@ -14,4 +14,6 @@ import java.util.Optional;
 @Transactional
 public interface TestModelDAO extends CrudRepository<TestModel, Long> {
     Optional<TestModel> findById(Long id);
+
+    TestModel findByPersonId(Long personId);
 }
